@@ -1,18 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
-import practice from './Component/practice';
 import Navbar from './Components/Navbar';
-
+import RoutesComp from './Components/RoutesComp';
 function App() {
   return (
     <div className="App">
       <practice />
-      <Navbar/>
+      <RoutesComp/>
+       <Navbar/>
     </div>
   );
 }
-
-import React from 'react'
-import Navbar from './Components/Navbar';
-
-
+export default App;
