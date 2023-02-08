@@ -1,12 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
-import practice from './Component/practice';
+import Trending from './Component/Trending/Trending';
 
 
 function App() {
   return (
     <div className="App">
-      <practice />
     </div>
   );
 }
