@@ -36,8 +36,6 @@ function Navbar() {
       <Button variant="primary" style={style3}><Link style={aStyle} to="/Explore"><AiOutlineBorderlessTable/> Explore</Link> </Button>{' '}
       <br /> 
       <UserProfile/>
-      {/* <Button variant="primary" style={style3}><Link style={aStyle} to="/Userprofile"><AiOutlineBorderlessTable/> Profile</Link> </Button>{' '} */}
-      {/* <br />  */}
        <Language/>
       <br /> 
       <Button variant="primary" style={style3}> <Link style={aStyle} to="/Search"><AiOutlineSearch/>  Search </Link></Button>{' '}

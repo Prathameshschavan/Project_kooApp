@@ -42,6 +42,7 @@ function MyVerticallyCenteredModal(props) {
       }, 1500);
     } else {
       setIsSignedIn(true);
+      window.location.reload(false);
       alert("Sign In Successful!")
     }
   };

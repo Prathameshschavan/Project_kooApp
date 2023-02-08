@@ -13,7 +13,6 @@ function RoutesComp(props) {
       <Route path="/Feed" element={<Feed/>} />
       <Route path="/Explore" element={<Explore/>} />
       <Route path="/Userprofile" element={<UserProfile/>} />
-      {/* <Route path="/Language" element={<Language/>} /> */}
       <Route path="/Search" element={<Search />} />
       <Route path="/Koo" element={<Koo/>}/>
       <Route path="/Signin" element={<Signin/>}/>
