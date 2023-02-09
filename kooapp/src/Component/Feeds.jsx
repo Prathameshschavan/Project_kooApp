@@ -5,7 +5,7 @@ import action from "../Redux/Action"
 import store from "../Redux/Store"
 import Cards from "./Cards"
 import Nav from "./Nav"
-import Profilecard from "./Profilecard"
+// import Profilecard from "./Profilecard"
 
 const Feed =()=>{
      const data =useSelector((store)=>{
