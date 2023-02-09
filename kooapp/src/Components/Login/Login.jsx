@@ -6,7 +6,7 @@ const Login = () => {
   const [isVerifying, setIsVerifying] = useState(false);
   const [isVerified, setIsVerified] = useState(false);
   const [isSignedIn, setIsSignedIn] = useState(false);
-
+// Naya code starting here
   const handleMobileNumberChange = (e) => {
     setMobileNumber(e.target.value);
   };
@@ -24,15 +24,12 @@ const Login = () => {
     }
 
     if (!isVerified) {
-      // Pretend to send a request to receive an OTP
       setIsVerifying(true);
       setTimeout(() => {
-        // Pretend to receive an OTP
         setIsVerifying(false);
         setIsVerified(true);
       }, 1000);
     } else {
-      // Pretend to sign in
       setIsSignedIn(true);
     }
   };
