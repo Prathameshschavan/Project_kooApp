@@ -13,13 +13,24 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
+<<<<<<< HEAD
+=======
+    "install": "^0.13.0",
+>>>>>>> e16e86a7ffada6980115f2cc3bac8db149cc759c
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
+<<<<<<< HEAD
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.6",
+=======
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.8.1",
+    "react-scripts": "5.0.1",
+    "redux-thunk": "^2.4.2",
+>>>>>>> e16e86a7ffada6980115f2cc3bac8db149cc759c
     "web-vitals": "^2.1.4"
   },
   "scripts": {
