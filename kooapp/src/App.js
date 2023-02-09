@@ -1,25 +1,25 @@
-<<<<<<< HEAD
 import './App.css';
-import Navbar from './Components/Navbar';
 import RoutesComp from './Components/RoutesComp';
+import Navbar from './Components/Navbar';
+import Feed from './Component/Feed';
+import Nav from "./Component/Nav"
+import RouterDinesh from './Component/RouterDinesh';
 function App() {
   return (
     <div className="App">
-      <practice />
-      <RoutesComp/>
+      <div className='Koo'>
+       <div>
+       <RoutesComp/>
        <Navbar/>
+       </div>
+        <div> 
+        <Nav/>
+        <RouterDinesh/>
+        <Feed/>
+        </div>
+      </div>
     </div>
-=======
+  )
+};
 
-import './App.css';
-import Feed from './Component/Feeds';
-import Trending from './Component/Trending/Trending';
-function App() {
-  return (
-    <div className="App">
-      <Feed/>
-   </div>
->>>>>>> e16e86a7ffada6980115f2cc3bac8db149cc759c
-  );
-}
 export default App;

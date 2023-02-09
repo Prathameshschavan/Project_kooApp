@@ -21,7 +21,9 @@ function Navbar() {
  var style2={
      fontSize: "18px",
      display:"grid",
-     width:"25%"
+     width:"25%",
+     position: "sticky",
+      top: "75px"
  }
  var imagestyle={
   width: "3rem",

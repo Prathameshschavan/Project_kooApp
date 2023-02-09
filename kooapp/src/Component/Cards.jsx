@@ -6,7 +6,6 @@ function Cards({item}) {
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Body>
-        <br />
         <div style={{display:"flex",gap:"10px",alignItems:"center"}}>
           <div>
           <img src={item.avatar} alt="" style={{width:"50px",height:"50px",borderRadius:"50%",objectFit: "cover"}}/>
@@ -22,7 +21,7 @@ function Cards({item}) {
         <p style={{textAlign: "initial",color:"blue",margin:"0"}}>#{item.Tag1} #{item.Tag2}</p>
        <br />
         {/* <Card.Link href="#"></Card.Link> */}
-        <img src={item.image} alt="" style={{width:"730px",objectFit:"cover"}} />
+        <img src={item.image} alt="" style={{width:"713px",objectFit:"cover",marginLeft:"0"}} />
         <input type="text" placeholder='Write Your Comment' />
       </Card.Body>
     </Card>

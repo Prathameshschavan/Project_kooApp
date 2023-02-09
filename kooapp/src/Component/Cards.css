@@ -2,3 +2,18 @@
     width: 46rem !important;
     border: 3px solid !important;
 }
+.NavbarDinesh{
+    top: 0;
+    z-index: 1;
+    position: sticky;
+    padding: 16px;
+    display: flex;
+    background-color:#f8f7f3;
+    gap: 25px;
+    font-weight: 700;
+    font-size: larger;
+}
+.NavbarDinesh>a{
+    color: #888888;
+    text-decoration: none;
+}
