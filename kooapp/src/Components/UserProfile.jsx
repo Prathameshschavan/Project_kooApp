@@ -29,7 +29,7 @@ const UserProfile = (props) => {
     <div>
       <p>
         <FcManager />
-        admin{value ? value[0] : ""}
+        Guest_{value ? value[0]+value[1]+value[2] : ""}
       </p>
       {value && (
         <>
