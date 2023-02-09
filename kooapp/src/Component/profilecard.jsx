@@ -1,5 +1,5 @@
  const Profilecard =({item})=>{
-    console.log(item)
+    // console.log(item)
     return (
         <div>
             <img src={item.avatar} alt={item.people}  width="80px" />
