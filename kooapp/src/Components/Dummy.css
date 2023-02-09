@@ -1,0 +1,12 @@
+form {
+    /* padding: 51px 30px 33px 21px; */
+    box-shadow: 0 0 32px 22px antiquewhite;
+    width: 339px;
+    margin: auto;
+    margin-top: 20%;
+    height: 197px;
+    /* line-height: 41px; */
+}
+button, input, optgroup, select, textarea {
+    margin: 3% !important;
+}
