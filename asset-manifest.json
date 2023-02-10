@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Project_kooApp/static/css/main.c678528d.css",
-    "main.js": "/Project_kooApp/static/js/main.afa98e37.js",
+    "main.css": "/Project_kooApp/static/css/main.325e8f6b.css",
+    "main.js": "/Project_kooApp/static/js/main.9fc4c2ab.js",
     "index.html": "/Project_kooApp/index.html",
-    "main.c678528d.css.map": "/Project_kooApp/static/css/main.c678528d.css.map",
-    "main.afa98e37.js.map": "/Project_kooApp/static/js/main.afa98e37.js.map"
+    "main.325e8f6b.css.map": "/Project_kooApp/static/css/main.325e8f6b.css.map",
+    "main.9fc4c2ab.js.map": "/Project_kooApp/static/js/main.9fc4c2ab.js.map"
   },
   "entrypoints": [
-    "static/css/main.c678528d.css",
-    "static/js/main.afa98e37.js"
+    "static/css/main.325e8f6b.css",
+    "static/js/main.9fc4c2ab.js"
   ]
 }
