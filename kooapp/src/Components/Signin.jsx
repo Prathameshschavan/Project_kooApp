@@ -5,10 +5,12 @@ import Modal from 'react-bootstrap/Modal';
 import myContext from "./myContext";
 import { AiFillGoogleCircle,AiFillApple,AiOutlineMail,AiOutlineWhatsApp } from "react-icons/ai";
 import "./Signin.css"
+import Alert from 'react-bootstrap/Alert';
 import UserProfile from './UserProfile';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DropDown from './DropDwon';
 var mobilenumberfinal = [];
+let OTP1;
 function MyVerticallyCenteredModal(props) {
   const [otp, setOtp] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
@@ -22,14 +24,14 @@ function MyVerticallyCenteredModal(props) {
     localStorage.setItem('papa',e.target.value);
     mobilenumberfinal=[];
     mobilenumberfinal.push(mobileNumber+[1]);
-    // console.log(mobilenumberfinal)
   };
   const handleOtpChange = (e) => {
     setOtp(e.target.value);
   };
-
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
+     console.log(mobilenumberfinal)
     if (mobileNumber.length !== 10) {
       alert("Please enter a valid 10-digit mobile number.");
       return;
@@ -39,8 +41,13 @@ function MyVerticallyCenteredModal(props) {
       setTimeout(() => {
         setIsVerifying(false);
         setIsVerified(true);
-      }, 1500);
-    } else {
+        OTP1=Math.floor(1000 + Math.random() * 9000);
+        console.log(OTP1);
+        alert("YOUR OTP IS : "+OTP1);
+      }, 1000);
+     
+    }
+    else  {
       setIsSignedIn(true);
       window.location.reload(false);
       alert("Sign In Successful!")
@@ -78,7 +85,11 @@ function MyVerticallyCenteredModal(props) {
          {isVerifying && <Spinner animation="border"  role="status">
         <span className="visually-hidden"><p>Verifying...</p></span>
         </Spinner>}
-
+        {isVerified && (
+        <Alert variant="success">
+          Your OTP is {OTP1}
+        </Alert>
+        )}
          {isVerified && !isSignedIn && (
         <form onSubmit={handleSubmit}>
           <h2>OTP Sent to+{mobileNumber}</h2>
