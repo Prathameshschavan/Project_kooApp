@@ -8,7 +8,9 @@ import { useState,useEffect } from "react";
 import { FcManager } from "react-icons/fc";
 const UserProfile = (props) => {
   const [value, setValue] = useState(localStorage.getItem("papa"));
-
+  const [isCountingDown, setIsCountingDown] = useState(false);
+  const [seconds, setSeconds] = useState(5);
+  const [isActive, setIsActive] = useState(false);
   useEffect(() => {
     const handleStorageChange = (e) => {
       if (e.key === "papa") {
@@ -20,10 +22,37 @@ const UserProfile = (props) => {
       window.removeEventListener("storage", handleStorageChange);
     };
   }, []);
+
   const handleLogout = () => {
-    localStorage.removeItem("papa");
-    window.location.reload(false);
+    if (window.confirm("Are you sure you want to log out?")) {
+      setIsCountingDown(true);
+      setIsActive(true);
+      setTimeout(() => {
+        localStorage.removeItem("papa");
+        window.location.reload(false);
+        console.log("Logging out...");
+      }, 5000);
+    }
   };
+
+  useEffect(() => {
+    let interval = null;
+    if (isActive) {
+      interval = setInterval(() => {
+        setSeconds(seconds => {
+          if (seconds > 0) {
+            return seconds - 1;
+          }
+          clearInterval(interval);
+          return 0;
+        });
+      }, 1000);
+    } else if (!isActive && seconds !== 0) {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [isActive, seconds]);
+
 
   return (
     <div>
@@ -36,8 +65,14 @@ const UserProfile = (props) => {
     <button style={{border:" none",color: "rgb(136, 136, 136)",fontSize: "19px",
     textDecoration: "none",backgroundColor: "white"}} ><FiBell/><Notification/></button>
     <br /><br />
-    <button onClick={handleLogout} style={{border:" none",color: "rgb(136, 136, 136)",fontSize: "19px",
-    textDecoration: "none",backgroundColor: "white"}}><FcUpRight/> Logout</button>
+    {isCountingDown ? (
+        <div>
+          Logging out in {seconds} seconds...
+        </div>
+      ) : (
+        <button onClick={handleLogout} style={{border:" none",color: "rgb(136, 136, 136)",fontSize: "19px",
+         textDecoration: "none",backgroundColor: "white"}}><FcUpRight/> Logout</button>
+      )}
     <br /><br />
         </>
       )}
