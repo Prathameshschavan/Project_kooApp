@@ -87,7 +87,7 @@ function MyVerticallyCenteredModal(props) {
         </Spinner>}
         {isVerified && (
         <Alert variant="success">
-          Your OTP is {OTP1}
+          <h4>Your OTP is {OTP1}</h4>
         </Alert>
         )}
          {isVerified && !isSignedIn && (
