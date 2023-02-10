@@ -2,7 +2,7 @@
 import {Link} from "react-router-dom"
   const Nav =()=>{
     return(
-        <div className="NavbarDinesh">
+        <div className="NavbarDinesh" style={{fontSize:"15px"}}>
            <Link to="/Feed">Feed</Link>
            <Link to="/people">People</Link>
            <Link to="/new">New</Link>

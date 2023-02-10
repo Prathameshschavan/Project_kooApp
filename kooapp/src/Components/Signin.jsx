@@ -130,7 +130,7 @@ function Signin (props) {
         {/* <UserProfile props={mobilenumberfinal}/> */}
         </div>
       </myContext.Provider>
-      <Button variant="primary" className='urgent' onClick={() => setModalShow(true)}>
+      <Button  variant='light' className='urgent' onClick={() => setModalShow(true)}>
        SignIn
       </Button>
       <MyVerticallyCenteredModal

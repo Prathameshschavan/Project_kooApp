@@ -1,4 +1,5 @@
 
+import { useState } from "react"
 import { useEffect} from "react"
 import{useSelector, useDispatch} from "react-redux"
 import action from "../Redux/Action"
@@ -7,20 +8,39 @@ import Cards from "./Cards"
 // import Profilecard from "./Profilecard"
 
 const Feed =()=>{
-     const data =useSelector((store)=>{
-        return ( store.product)
-     })
-    const dispatch =useDispatch()
-    useEffect(()=>{
-        action(dispatch)
-    },[])
-     console.log(data)
+    // const [count, setcount] = useState(0); 
 
+         const data =useSelector((store)=>{
+            return store.product;
+         })
+
+         console.log(data);
+    
+        
+        const dispatch =useDispatch()
+        useEffect(()=>{
+            action(dispatch)
+        },[])
+
+        // let fetchfc = async()=>{
+        //  let data = await fetch("http://localhost:3004/Feeds");
+        //  data= await data.json();
+        //  console.log(data);
+        // }
+
+        // fetchfc();x
+
+    //  let data=[]
+;
 
     return(
         <>
-        <div>
-        <div> 
+        <div style={{border: "2px solid #f8f7f3", backgroundColor:"#f8f7f3" ,width:"100%", margin:"0 0 0 0%"}}>
+        <input readOnly  style={{width:"94%", borderRadius:"10px", padding:"1% 1% 1% 7%", outline:"none", border:"none",cursor:"pointer",boxShadow: "rgba(0, 0, 0, 0.10) 0px 0px 0px 1px", margin:"2% 0 2% -89% " }} type="text" placeholder= "What's on your mind?" />
+        <i style={{position:"absolute", cursor:"pointer", margin:"1.4% 20% 20% -2%"}} class="fa-solid fa-circle-plus"></i>
+        <i style={{position:'', marginLeft:"-92%", marginTop:"%", fontSize:"20px"}} id="style.fa-solid" class="fa-solid fa-user fa-lg"></i>
+
+        <div style={{ }} > 
             {data.map((ele,i)=>{
              return( <Cards key={i+1} item ={ele}/>)
             })}
