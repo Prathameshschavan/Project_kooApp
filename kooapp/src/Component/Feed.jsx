@@ -22,17 +22,6 @@ const Feed =()=>{
             action(dispatch)
         },[])
 
-        // let fetchfc = async()=>{
-        //  let data = await fetch("http://localhost:3004/Feeds");
-        //  data= await data.json();
-        //  console.log(data);
-        // }
-
-        // fetchfc();x
-
-    //  let data=[]
-;
-
     return(
         <>
         <div style={{border: "2px solid #f8f7f3", backgroundColor:"#f8f7f3" ,width:"100%", margin:"0 0 0 0%"}}>

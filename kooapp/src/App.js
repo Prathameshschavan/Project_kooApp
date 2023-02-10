@@ -15,7 +15,6 @@ function App() {
         <div style={{width:"140%",margin: "0 0 0 0%" }} > 
         <Nav/>
         <RouterDinesh/>
-        <Feed/>
         </div>
         <div style={{width:"100%"}} > 
         lksndvlkndsvlknsdlvnslvnldvnlsss

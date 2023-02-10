@@ -1,5 +1,5 @@
 import Button from 'react-bootstrap/Button';
-import React,{ useState } from "react";
+import React,{ useState,useEffect } from "react";
 import Spinner from 'react-bootstrap/Spinner';
 import Modal from 'react-bootstrap/Modal';
 import myContext from "./myContext";
@@ -8,7 +8,9 @@ import "./Signin.css"
 import UserProfile from './UserProfile';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DropDown from './DropDwon';
+import Alert from 'react-bootstrap/Alert';
 var mobilenumberfinal = [];
+let OTP1;
 function MyVerticallyCenteredModal(props) {
   const [otp, setOtp] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
@@ -16,7 +18,9 @@ function MyVerticallyCenteredModal(props) {
   const [isVerified, setIsVerified] = useState(false);
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [value, setValue] = useState(localStorage.getItem('key') || '');
- 
+  const [seconds, setSeconds] = useState(30);
+  const [isActive, setIsActive] = useState(false);
+
   const handleMobileNumberChange = (e) => {
     setMobileNumber(e.target.value);
     localStorage.setItem('papa',e.target.value);
@@ -39,13 +43,35 @@ function MyVerticallyCenteredModal(props) {
       setTimeout(() => {
         setIsVerifying(false);
         setIsVerified(true);
-      }, 1500);
+        setIsActive(true);
+        OTP1=Math.floor(1000 + Math.random() * 9000);
+        console.log(OTP1);
+        alert("YOUR OTP IS : "+OTP1);
+      }, 1000);
     } else {
       setIsSignedIn(true);
       window.location.reload(false);
       alert("Sign In Successful!")
     }
   };
+  useEffect(() => {
+    let interval = null;
+    if (isActive) {
+      interval = setInterval(() => {
+        setSeconds(seconds => {
+          if (seconds > 0) {
+            return seconds - 1;
+          }
+          clearInterval(interval);
+          return 0;
+        });
+      }, 1000);
+    } else if (!isActive && seconds !== 0) {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [isActive, seconds]);
+
   return (
     <Modal
       {...props}
@@ -78,6 +104,11 @@ function MyVerticallyCenteredModal(props) {
          {isVerifying && <Spinner animation="border"  role="status">
         <span className="visually-hidden"><p>Verifying...</p></span>
         </Spinner>}
+        {isVerified && (
+        <Alert variant="success">
+          <h4>Enter Your OTP!</h4>
+        </Alert>
+        )}
 
          {isVerified && !isSignedIn && (
         <form onSubmit={handleSubmit}>
@@ -92,7 +123,7 @@ function MyVerticallyCenteredModal(props) {
         
           <button type="submit" className='nayainput'>Verify</button>
           <br />
-          <a href="/login"> <h4>Resend OTP?</h4></a>
+          <a href="/login"> <h4>Resend OTP (0 : {seconds}) </h4></a>
         </form>
       )}
        
