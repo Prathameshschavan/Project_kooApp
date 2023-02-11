@@ -10,15 +10,6 @@ import { Link } from "react-router-dom"
 import { myAction } from "../Redux/Action"
 const Feed =()=>{
 
-    // const [count, setcount] = useState(0); 
-
-    
-
- 
-
-  
-
-    // const [count, setcount] = useState(0);
     const [showAnotherComponent, setShowAnotherComponent] = useState(false); 
     
     const handleClick = () => {
@@ -26,6 +17,7 @@ const Feed =()=>{
       };
 
          const data =useSelector((store)=>{
+            console.log(store);
             return store.product;
          })
 

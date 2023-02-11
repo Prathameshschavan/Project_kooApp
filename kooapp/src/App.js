@@ -22,20 +22,20 @@ function App() {
 
   return (
     <div className="App">
-      <div className='Koo'>
-       <div style={{ width: "100%", }}>
-       <RoutesComp/>
-       <Navbar/>
-       </div>
-        <div style={{width:"140%",margin: "0 0 0 0%" }} > 
-        <Nav/>
-        <RouterDinesh/>
-        <Feed/>
-        </div>
-        <div style={{width:"100%"}} > 
-        lksndvlkndsvlknsdlvnslvnldvnlsss
-       </div>
-      </div>
+      {data ?  <div><ChakraProvider> <PostWriter /> </ChakraProvider></div> : <div className='Koo'>
+                                                  <div style={{ width: "100%", }}>
+                                                      <RoutesComp/>
+                                                      <Navbar/>
+                                                  </div>
+                                                  <div style={{width:"140%",margin: "0 0 0 0%" }} > 
+                                                      <Nav/>
+                                                      <RouterDinesh/>
+                                                      <Feed/>
+                                                  </div>
+                                                  <div style={{width:"100%"}} > 
+                                                       lksndvlkndsvlknsdlvnslvnldvnlsss
+                                                  </div>
+                                              </div>}
     </div>
   )
 };
