@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import Video from "../Components/Video";
 import Feed from "./Feed";
 import PostWriter from "./PostWriter";
 
@@ -11,7 +12,7 @@ function RouterDinesh(props) {
       <Route path="/people" element={<Feed/>} />
       <Route path="/new" element={<Feed/>} />
       <Route path="/polls" element={<Feed/>}/>
-      <Route path="/videos" element={<Feed/>}/>
+      <Route path="/videos" element={<Video/>}/>
       <Route path="/cricket" element={<Feed/>}/>
       <Route path="/following" element={<Feed/>}/>
       <Route path="/popular" element={<Feed/>}/>

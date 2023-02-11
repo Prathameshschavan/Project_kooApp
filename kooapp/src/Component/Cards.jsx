@@ -4,25 +4,12 @@ import { BsFillCheckCircleFill } from "react-icons/bs";
 import {useSelector,useDispatch} from "react-redux";
 import { useEffect, useState } from 'react';
 import action from '../Redux/Action';
-
-
 function Cards({item}) {
   console.log(item);
-
   let dispatch = useDispatch();
-
   const data =useSelector((store)=>{
     return ( store.product)
   })
-
-
-//   const dispatch =useDispatch()
-  
-//     useEffect(()=>{
-//         action(dispatch)
-//     },[])
-
-
 async function handleClick(){
   let obj={
     ...item, Likes: item.Likes+1,
@@ -41,51 +28,6 @@ async function handleClick(){
   action(dispatch);
   
 }
-
-
-
-  
-//   const handleLikeClick =async (id) => {
-//     const updatedPosts = data.map(post => {
-//       if (post.id === id) {
-//         return { ...post, Likes: post.Likes + 1 };
-//       }
-//       return post;
-//     });
-
-//     console.log(updatedPosts);
-//     // setPosts(updatyyyyedPosts);
-
-//     try{
-//       let updata = await fetch(`http://localhost:3004/Feeds/${id}`, {
-//         method: "PATCH",
-//         headers: {
-//           "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify({ Likes: updatedPosts.find(post => post.id === id).Likes })
-//       })
-  
-//        updata= await updata.json();
-//        console.log(updata);
-//       //  setcount(count+1);
-//       item.setcount(id);
-       
-//     }
-
-//     catch(error){
-//       console.error(error);
-//     }
-      
-      
-    
-  
-// };
- 
-
-
-
- 
-
   return (
     <Card >
       <Card.Body>

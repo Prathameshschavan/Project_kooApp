@@ -65,10 +65,10 @@
 }
 .fade modal show,.modal-dialog modal-lg modal-dialog-centered{
     display: block !important;
-    padding-left: 10% !important;
+    padding-left: 20% !important;
 }
 .modal.show .modal-dialog {
-    padding-left: 9% !important;
+    padding-left: 13.5% !important;
     transform: none;
 }
 

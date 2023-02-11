@@ -9,6 +9,7 @@ import { Route } from "react-router-dom";
 import { Link } from "react-router-dom"
 import { myAction } from "../Redux/Action"
 const Feed =()=>{
+
     // const [count, setcount] = useState(0); 
 
     
@@ -16,6 +17,14 @@ const Feed =()=>{
  
 
   
+
+    // const [count, setcount] = useState(0);
+    const [showAnotherComponent, setShowAnotherComponent] = useState(false); 
+    
+    const handleClick = () => {
+        setShowAnotherComponent(true);
+      };
+
          const data =useSelector((store)=>{
             return store.product;
          })
@@ -27,6 +36,7 @@ const Feed =()=>{
         useEffect(()=>{
             action(dispatch)
         },[])
+
 
 
         const openWriter=()=>{

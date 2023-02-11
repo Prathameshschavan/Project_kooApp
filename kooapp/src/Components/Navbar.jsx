@@ -39,7 +39,6 @@ function Navbar() {
   return (
     <div style={style2}>
        <Link to="/"><img src="https://www.kooapp.com/assets/2d634360.svg" style={imagestyle} alt="" /></Link>
-
        <br /> 
        <div id="navitems">
           <Button variant="primary" style={style3}><Link style={aStyle} to="/"><AiOutlineHome/> Feed</Link></Button>{' '}
