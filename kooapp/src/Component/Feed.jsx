@@ -8,8 +8,12 @@ import Cards from "./Cards"
 // import Profilecard from "./Profilecard"
 
 const Feed =()=>{
-    // const [count, setcount] = useState(0); 
-
+    // const [count, setcount] = useState(0);
+    const [showAnotherComponent, setShowAnotherComponent] = useState(false); 
+    
+    const handleClick = () => {
+        setShowAnotherComponent(true);
+      };
          const data =useSelector((store)=>{
             return store.product;
          })
