@@ -2,7 +2,8 @@
     product :[],
     get :false,
     post:false,
-    delete:false
+    delete:false,
+    writer:false,
  }
 
  const Reducer =(state = intitate,action)=>{
@@ -10,6 +11,12 @@
         case "Get":{
             return {
                 ...state, product:action.payload
+            }
+        }
+
+        case "OPEN_WRITER" :{
+            return{
+                ...state, writer:action.payload
             }
         }
     }

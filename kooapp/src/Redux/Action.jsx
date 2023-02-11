@@ -13,5 +13,15 @@ const action =(dispatch)=>{
 }
 
 
+export const myAction=(dispatch,flag)=>{
+    dispatch({
+        type:"OPEN_WRITER",
+        payload:flag,
+    })
+}
+
+
+
+
 
 export default action;

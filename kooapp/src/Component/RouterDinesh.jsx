@@ -1,6 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Feed from "./Feed";
+import PostWriter from "./PostWriter";
+
+
 function RouterDinesh(props) {
   return (
     <Routes>
