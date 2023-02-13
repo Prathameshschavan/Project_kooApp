@@ -14,10 +14,12 @@ export default function Trending() {
     <i style={{margin:"-6.5% 0% 0 25% ", position:"absolute"}} class="fa-solid fa-microphone"></i>
     
 
+    <h6 style={{margin:"4% 0 -3% -5%", fontSize:"25px", fontWeight:"600", width:"100%"}}> <pre>Trending Hashtags           <i class="fa-solid fa-arrow-right"></i></pre></h6>
+
     <div id={style.first}>
       <div className={style.card}>
         <div>
-          <p> #indvsaus </p>
+          <p> #aeroindia2023 </p>
           <img src={pic} alt="trendingImage" />
         </div>
         <i className="fa-regular fa-plus"></i>
@@ -27,7 +29,7 @@ export default function Trending() {
     <div id={style.first}>
       <div className={style.card}>
         <div>
-          <p> #indvsaus </p>
+          <p> #womensinblue </p>
           <img src={pic} alt="trendingImage" />
         </div>
         <i className="fa-regular fa-plus"></i>
@@ -37,7 +39,7 @@ export default function Trending() {
     <div id={style.first}>
       <div className={style.card}>
         <div>
-          <p> #indvsaus </p>
+          <p> #mcstan </p>
           <img src={pic} alt="trendingImage" />
         </div>
         <i className="fa-regular fa-plus"></i>
@@ -47,7 +49,7 @@ export default function Trending() {
     <div id={style.first}>
       <div className={style.card}>
         <div>
-          <p> #indvsaus </p>
+          <p> #nationalwomensday </p>
           <img src={pic} alt="trendingImage" />
         </div>
         <i className="fa-regular fa-plus"></i>

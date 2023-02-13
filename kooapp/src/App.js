@@ -16,7 +16,14 @@ function App() {
  })
 
 
+ const style = {
  
+  // Adding media query..
+  '@media (max-width: 500px)': {
+    display: 'none',
+  },
+  width:"100%"
+};
 
 
 
@@ -33,7 +40,7 @@ function App() {
                                                       <RouterDinesh/>
                                                       
                                                   </div>
-                                                  <div style={{width:"100%"}} > 
+                                                  <div style={style} > 
                                                   <Trending /> 
                                                   </div>
                                               </div>}

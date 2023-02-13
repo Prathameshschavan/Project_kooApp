@@ -2,20 +2,20 @@
   "Feeds": [
     {
       "id": 1,
-      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-dUM4eujzrs2SRBbzMGdcHMbJ3Ox2kky5kDNUwOoep9uxX3SW0tgffqEUHdYmIbq17GM&usqp=CAU",
-      "username": "@femalecricket",
-      "description": "📢UPDATE📢 A maximum of 90 slots are available with the 5 teams,  with 30 being slotted for overseas players.Out of 409 players,  246 are Indians and 163 are overseas players of which 8 players are from associate nations.  ",
-      "people": "Female Cricket",
+      "avatar": "https://static.toiimg.com/thumb/msid-96938722,width-960,height-1024,resizemode-6.cms",
+      "username": "@rashmika",
+      "description": "Upper moon demons are coming who can save tanjiro now..",
+      "people": "Rasmika mandana",
       "peoplePost": [
         {}
       ],
-      "image": "https://imgnew.outlookindia.com/uploadimage/library/16_9/16_9_5/IMAGE_1646829089.webp",
-      "video": "",
-      "Tag1": "#cricket",
-      "Tag2": "#ipl2023",
-      "Likes": 33,
-      "Comments": "18",
-      "category": "cricket"
+      "image": "https://sumansourabh.in/wp-content/uploads/2022/01/Upper-Moons-in-Demon-Slayer-1024x576.webp",
+      "video": "https://youtu.be/oWGOd9nzMrc",
+      "Tag1": "#animeIndia",
+      "Tag2": "#memes",
+      "Likes": 324,
+      "Comments": "23",
+      "category": "actor"
     },
     {
       "id": 2,
@@ -443,37 +443,20 @@
     },
     {
       "id": 20,
-      "avatar": "https://static.toiimg.com/thumb/msid-96938722,width-960,height-1024,resizemode-6.cms",
-      "username": "@rashmika",
-      "description": "Upper moon demons are coming who can save tanjiro now..",
-      "people": "Rasmika mandana",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-dUM4eujzrs2SRBbzMGdcHMbJ3Ox2kky5kDNUwOoep9uxX3SW0tgffqEUHdYmIbq17GM&usqp=CAU",
+      "username": "@femalecricket",
+      "description": "📢UPDATE📢 A maximum of 90 slots are available with the 5 teams,  with 30 being slotted for overseas players.Out of 409 players,  246 are Indians and 163 are overseas players of which 8 players are from associate nations.  ",
+      "people": "Female Cricket",
       "peoplePost": [
         {}
       ],
-      "image": "https://sumansourabh.in/wp-content/uploads/2022/01/Upper-Moons-in-Demon-Slayer-1024x576.webp",
-      "video": "https://youtu.be/oWGOd9nzMrc",
-      "Tag1": "#animeIndia",
-      "Tag2": "#memes",
-      "Likes": 324,
-      "Comments": "23",
-      "category": "actor"
-    },
-    {
-      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMCnKVdb6r65QZHqRYFJ8Bo_LK2_RmQH1quU0kEoKJEqxkHgJP53wS6tFUqAZD-0CY2GU&usqp=CAU",
-      "username": "Guest_123",
-      "description": "हैलो वर्ल्ड",
-      "people": "Guest_123",
-      "peoplePost": [
-        {}
-      ],
-      "image": "",
+      "image": "https://imgnew.outlookindia.com/uploadimage/library/16_9/16_9_5/IMAGE_1646829089.webp",
       "video": "",
-      "Tag1": "",
-      "Tag2": "",
-      "Likes": 1,
-      "Comments": 0,
-      "category": "",
-      "id": 21
+      "Tag1": "#cricket",
+      "Tag2": "#ipl2023",
+      "Likes": 33,
+      "Comments": "18",
+      "category": "cricket"
     }
   ],
   "People": [
@@ -484,7 +467,7 @@
       "username": "@PiramalFinance",
       "about": "Financial Services",
       "icon": "https://images.kooapp.com/VerifiedAccountSheild96x96.png",
-      "Follow": true,
+      "Follow": false,
       "item": {
         "id": "1",
         "image": "https://images.kooapp.com/koo-profile-media/profiles/31386620/profile1661424911315t1a2pj.png?tr=n-dp_square",
