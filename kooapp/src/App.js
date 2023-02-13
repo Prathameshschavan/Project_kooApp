@@ -1,12 +1,13 @@
-import logo from './logo.svg';
+
 import './App.css';
-import check from './Component/check';
+
+import People from './Component/People';
 
 
 function App() {
   return (
     <div className="App">
-      <check/>
+      <People/>
     </div>
   );
 }

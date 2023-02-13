@@ -1,0 +1,131 @@
+
+  [
+        {
+            "id": "1",
+            "image": "https://images.kooapp.com/koo-profile-media/profiles/31386620/profile1661424911315t1a2pj.png?tr=n-dp_square",
+            "name": "Piramal Capital & Housing Finance Limited",
+            "username": "@PiramalFinance",
+            "about": "Financial Services",
+            "icon": "https://images.kooapp.com/VerifiedAccountSheild96x96.png",
+            "Follow":false
+        },
+        {
+            "id": "2",
+            "image": "https://images.kooapp.com/koo-profile-media/profiles/41741491/profile.jpeg?tr=n-dp_square",
+            "name": "Dalai Lama",
+            "username": "@dalailama",
+            "about": "Spiritual Leader",
+            "icon": "https://images.kooapp.com/VerifiedAccountSheild96x96.png",
+            "Follow":false
+        },
+        {
+            "id": "3",
+            "image": "https://images.kooapp.com/koo-profile-media/profiles/36613113/profile1667287043124fqvucs.png?tr=n-dp_square",
+            "name": "Mamata Banerjee",
+            "username": "@MamataOfficial",
+            "about": "Politician",
+            "icon": "https://images.kooapp.com/VerifiedAccountSheild96x96.png",
+            "Follow":false
+        },
+        {
+            "id": "4",
+            "image": "https://images.kooapp.com/koo-profile-media/profiles/11664193/c05e75f0-ba92-4d0c-9b30-fcebaf6b3cf8voke.jpg?tr=n-dp_square",
+            "name": "Virat Kohli",
+            "username": "@virat.kohli",
+            "about": "Cricketer",
+            "icon": "https://images.kooapp.com/VerifiedAccountSheild96x96.png",
+            "Follow":false
+        },
+        {
+            "id": "5",
+            "image": "https://images.kooapp.com/koo-profile-media/profiles/7171858/ddf345ca-fc1b-49cc-9b6f-60922723a9b6voke.jpg?tr=n-dp_square",
+            "name": "Himanta Biswa Sarma",
+            "username": "@himantabiswa",
+            "about": "Politician",
+            "icon": "https://images.kooapp.com/VerifiedAccountSheild96x96.png",
+            "Follow":false
+        },
+        {
+            "id": "6",
+            "image": "https://images.kooapp.com/koo-profile-media/profiles/2486862/0e1be0ac-1921-4126-9d97-47db6ffe22ffvoke.jpg?tr=n-dp_square",
+            "name": "Piyush Goyal",
+            "username": "@piyushgoyal",
+            "about": "Politician",
+            "icon": "https://images.kooapp.com/VerifiedAccountSheild96x96.png",
+            "Follow":false
+        },
+        {
+            "id": "7",
+            "image": "https://images.kooapp.com/koo-profile-media/profiles/3072079/6B6C5408-7CCB-4BCF-8213-89CDC36A24FE-profile.jpeg?tr=n-dp_square",
+            "name": "Nitin Gadkari",
+            "username": "@nitin.gadkari",
+            "about": "Minister of Road Transport & Highways.",
+            "icon": "https://images.kooapp.com/VerifiedAccountSheild96x96.png",
+            "Follow":false
+        },
+        {
+            "id": "8",
+            "image": "https://images.kooapp.com/koo-profile-media/profiles/7374198/5c50ab26-efdd-4df0-b378-a9701e239a91voke.jpg?tr=n-dp_square",
+            "name": "Rajeev Chandrasekhar",
+            "username": "@rajeev_chandrasekhar",
+            "about": "Union Minister of State for Electronics.. ",
+            "icon": "https://images.kooapp.com/VerifiedAccountSheild96x96.png",
+            "Follow":false
+        },
+        {
+            "id": "9",
+            "image": "https://images.kooapp.com/koo-profile-media/profiles/8086871/fb0a526a-2b0c-4917-82d4-89c2daf45224voke.jpg?tr=n-dp_square",
+            "name": "Arjun Munda",
+            "username": "@arjunmunda",
+            "about": "Union Minister of Tribal Affairs.",
+            "icon": "https://images.kooapp.com/VerifiedAccountSheild96x96.png",
+            "Follow":false
+        },
+        {
+            "id": "10",
+            "image": "https://images.kooapp.com/koo-profile-media/profiles/7095786/3bd1e256-5ff6-4e21-86ed-20852b4191ddvoke.jpg?tr=n-dp_square",
+            "name": "SomnathTempleOfficial",
+            "username": "@SomnathTempleOfficial",
+            "about": "Religious Organisation",
+            "icon": "https://images.kooapp.com/VerifiedAccountSheild96x96.png",
+            "Follow":false
+        },
+        {
+            "id": "11",
+            "image": "https://images.kooapp.com/koo-profile-media/profiles/2850930/8836D206-927E-4BBF-9EF9-795756CEF6E4-profile.jpeg?tr=n-dp_square",
+            "name": "Swami Avdheshanand Giri",
+            "username": "@avdheshanandg",
+            "about": "Spiritual Leader",
+            "icon": "https://images.kooapp.com/VerifiedAccountSheild96x96.png",
+            "Follow":false
+        },
+        {
+            "id": "12",
+            "image": "https://images.kooapp.com/koo-profile-media/profiles/5096644/profile.jpeg?tr=n-dp_square",
+            "name": "All India Radio News",
+            "username": "@airnewsalerts",
+            "about": "Public Service Broadcaster",
+            "icon": "https://images.kooapp.com/VerifiedAccountSheild96x96.png",
+            "Follow":false
+        },
+        {
+            "id": "13",
+            "image": "https://images.kooapp.com/koo-profile-media/profiles/2796361/63aba622-bb0e-4ae2-8df9-4d8aac860bc2voke.jpg?tr=n-dp_square",
+            "name": "Pralhad Joshi",
+            "username": "@joshipralhad",
+            "about": "Politician",
+            "icon": "https://images.kooapp.com/VerifiedAccountSheild96x96.png",
+            "Follow":false
+        },
+        {
+            "id": "14",
+            "image": "https://images.kooapp.com/koo-profile-media/profiles/9875395/618cbf2b-deb7-4c3c-bca4-5c2474662637.jpg?tr=n-dp_square",
+            "name": "All India Trinamool Congress",
+            "username": "@AITCOfficial",
+            "about": "",
+            "icon": "https://images.kooapp.com/VerifiedAccountSheild96x96.png",
+            "Follow":false
+        }
+       
+    ]
+
