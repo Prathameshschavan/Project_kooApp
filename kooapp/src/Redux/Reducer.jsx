@@ -4,6 +4,7 @@
     post:false,
     delete:false,
     writer:false,
+    people:[],
  }
 
  const Reducer =(state = intitate,action)=>{
@@ -17,6 +18,12 @@
         case "OPEN_WRITER" :{
             return{
                 ...state, writer:action.payload
+            }
+        }
+
+        case "GetPeople" :{
+            return{
+                ...state,people: action.payload
             }
         }
     }

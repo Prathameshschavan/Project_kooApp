@@ -9,10 +9,12 @@ import Notification from "./Notification";
 import { useState,useEffect } from "react";
 import Button from 'react-bootstrap/Button';
 import { FcManager } from "react-icons/fc";
+import { FiLogOut } from "react-icons/fi";
+
 const UserProfile = (props) => {
   const [value, setValue] = useState(localStorage.getItem("papa"));
   const [isCountingDown, setIsCountingDown] = useState(false);
-  const [seconds, setSeconds] = useState(1);
+  const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);
   useEffect(() => {
     const handleStorageChange = (e) => {
@@ -33,7 +35,7 @@ const UserProfile = (props) => {
         localStorage.removeItem("papa");
         window.location.reload(false);
         console.log("Logging out...");
-      }, 5000);
+      }, 0);
     }
   };
   useEffect(() => {
@@ -53,28 +55,25 @@ const UserProfile = (props) => {
     }
     return () => clearInterval(interval);
   }, [isActive, seconds]);
+
+
+  let loginStatus = localStorage.getItem("papa");
   return (
     <div>
       
-        <Button><FaUserCircle /> Guest_{value ? value[0]+value[1]+value[2] : ""}  </Button>
+       {loginStatus?<Button><FaUserCircle /> Guest_{value ? value[0]+value[1]+value[2] : ""}  </Button>:<div style={{marginTop:"-10px"}}></div>} 
       
       {value && (
         <>
     <button style={{border:" none",color: "rgb(136, 136, 136)",fontSize: "19px",
     textDecoration: "none",backgroundColor: "white"}} >
-      <div style={{display:"flex"}}>
-      <FiBell style={{marginTop: "7px",gap:"4px"}}/><Notification/>
+      <div style={{display:"flex", alignItems:"center", gap:"5px", margin:"15px 0 20px 7px"}}>
+      <FiBell/><Notification/>
       </div>
     </button>
-    <br />{isCountingDown ? (
-        <div>
-          Logging out in {seconds}
-        </div>
-      ) : (
+   
         <button onClick={handleLogout} style={{border:" none",color: "rgb(136, 136, 136)",fontSize: "19px",
-         textDecoration: "none",backgroundColor: "white"}}><FcUpRight/> Logout</button>
-      )}
-    <br /><br />
+         textDecoration: "none",backgroundColor: "white", marginLeft:"10px"}}><FiLogOut /> Logout</button>
         </>
       )}
     </div>

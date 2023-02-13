@@ -8,7 +8,7 @@ import PostWriter from './Component/PostWriter';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import {ChakraProvider} from "@chakra-ui/react"
-
+import Trending from './Component/Trending/Trending';
 
 function App() {
   const data =useSelector((store)=>{
@@ -16,6 +16,7 @@ function App() {
  })
 
 
+ 
 
 
 
@@ -30,10 +31,10 @@ function App() {
                                                   <div style={{width:"140%",margin: "0 0 0 0%" }} > 
                                                       <Nav/>
                                                       <RouterDinesh/>
-                                                      <Feed/>
+                                                      
                                                   </div>
                                                   <div style={{width:"100%"}} > 
-                                                       lksndvlkndsvlknsdlvnslvnldvnlsss
+                                                  <Trending /> 
                                                   </div>
                                               </div>}
     </div>
@@ -41,3 +42,6 @@ function App() {
 };
 
 export default App;
+
+
+

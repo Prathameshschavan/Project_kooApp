@@ -29,6 +29,7 @@ function Navbar() {
      padding: "5%",
      marginLeft:"40%",
      textAlign: "left" ,
+     
 
     
  }
@@ -36,6 +37,9 @@ function Navbar() {
   width: "3rem",
   margin: "auto 3rem"
  }
+
+let loginStatus = localStorage.getItem("papa");
+console.log(loginStatus);
   return (
     <div style={style2}>
        <Link to="/"><img src="https://www.kooapp.com/assets/2d634360.svg" style={imagestyle} alt="" /></Link>
@@ -50,7 +54,8 @@ function Navbar() {
        
       <Button className="newbtn"> <Link className="COLOR" to="/Koo">+ Koo</Link></Button>
       <br /> <br />  
-      <Signin/>
+      {
+      loginStatus ?   <></>:<Signin/>}
     </div>
   );
 }

@@ -9,6 +9,8 @@ import UserProfile from './UserProfile';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DropDown from './DropDwon';
 import Alert from 'react-bootstrap/Alert';
+
+
 var mobilenumberfinal = [];
 let OTP1;
 function MyVerticallyCenteredModal(props) {
@@ -50,8 +52,9 @@ function MyVerticallyCenteredModal(props) {
       }, 1000);
     } else {
       setIsSignedIn(true);
-      window.location.reload(false);
+      window.location.reload();
       alert("Sign In Successful!")
+      window.location.href="./Feed"
     }
   };
   useEffect(() => {
@@ -161,7 +164,7 @@ function Signin (props) {
         {/* <UserProfile props={mobilenumberfinal}/> */}
         </div>
       </myContext.Provider>
-      <Button  variant='light' className='urgent' onClick={() => setModalShow(true)}>
+      <Button   variant='light' className='urgent' onClick={() => setModalShow(true)}>
        SignIn
       </Button>
       <MyVerticallyCenteredModal

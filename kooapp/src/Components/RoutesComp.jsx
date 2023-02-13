@@ -12,11 +12,11 @@ function RoutesComp(props) {
   return (
     <Routes>
        {/* <Route path="/Feed" element={<Feed/>} /> */}
-      <Route path="/Explore" element={<Explore/>} />
+      {/* <Route path="/Explore" element={<Explore/>} />
       <Route path="/Userprofile" element={<UserProfile/>} />
       <Route path="/Search" element={<Search />} />
       <Route path="/Koo" element={<Koo/>}/>
-      <Route path="/Signin" element={<Signin/>}/>
+      <Route path="/Signin" element={<Signin/>}/> */}
       {/* <Route path="*" element={<Feed/>}></Route> */}
     </Routes>
   );

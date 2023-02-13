@@ -5,27 +5,68 @@ import {useSelector,useDispatch} from "react-redux";
 import { useEffect, useState } from 'react';
 import action from '../Redux/Action';
 function Cards({item}) {
-  console.log(item);
+  // console.log(item);
   let dispatch = useDispatch();
   const data =useSelector((store)=>{
     return ( store.product)
   })
+
+  let loginStatus = localStorage.getItem("papa");
+
+
 async function handleClick(){
-  let obj={
-    ...item, Likes: item.Likes+1,
+
+  
+
+  let colorr= document.getElementById(item.id);
+  console.log(colorr.style.color);
+  
+  if(loginStatus){
+  if(colorr.style.color=="red"){
+  console.log("yes");
+    let obj={
+      ...item, Likes: item.Likes-1,
+    }
+    console.log(obj);
+
+    let data = await fetch(`http://localhost:3004/Feeds/${item.id}`,
+    {
+      method:"PATCH",
+      headers:{"Content-Type": "application/json"},
+      body: JSON.stringify(obj)
+    })
+  
+    data= await data.json();
+    // console.log(data);
+    action(dispatch);
+    colorr.style.color="black";
   }
+  else if(colorr.style.color=="black" || colorr.style.color==""  ){
+    console.log("no");
+    let obj={
+      ...item, Likes: item.Likes+1,
+    }
+  
+    console.log(obj);
+    let data = await fetch(`http://localhost:3004/Feeds/${item.id}`,
+    {
+      method:"PATCH",
+      headers:{"Content-Type": "application/json"},
+      body: JSON.stringify(obj)
+    })
+  
+    data= await data.json();
+    console.log(data);
+    colorr.style.color="red";
+    action(dispatch);
 
-  console.log(obj);
-  let data = await fetch(`http://localhost:3004/Feeds/${item.id}`,
-  {
-    method:"PATCH",
-    headers:{"Content-Type": "application/json"},
-    body: JSON.stringify(obj)
-  })
+  }
+}
+else{
+  alert("First Login to Like");
+}
 
-  data= await data.json();
-  console.log(data);
-  action(dispatch);
+
   
 }
   return (
@@ -36,14 +77,14 @@ async function handleClick(){
           <img src={item.avatar} alt="" style={{width:"50px",height:"50px",borderRadius:"50%",objectFit: "cover"}}/>
           </div>
           <div style={{marginTop:"1%"}}>
-              <Card.Title style={{fontSize: "15px",fontWeight:"bold"}}>{item.people} <BsFillCheckCircleFill style={{color: "gold",marginBottom: "-5px"}}/></Card.Title>
+              <Card.Title style={{fontSize: "15px",fontWeight:"bold"}}>{item.people} <BsFillCheckCircleFill style={{color: "gold",marginBottom: "2px"}}/></Card.Title>
               <Card.Subtitle className="mb-2 text-muted" style={{textAlign: "initial",fontSize: "10px", marginTop:"-8%"}}>{item.username}</Card.Subtitle>
           </div>
           </div>
          
              <Card.Text style={{textAlign: "initial", fontSize: "16px" }}>{item.description}</Card.Text>
         
-        <p style={{textAlign: "initial",color:"blue",  fontSize: "16px",margin:"-3% 0 2% 0"}}>#{item.Tag1} #{item.Tag2}</p>
+        <p style={{textAlign: "initial",color:"blue",  fontSize: "16px",margin:"-3% 0 2% 0"}}>{item.Tag1} {item.Tag2}</p>
       
         {/* <Card.Link href="#"></Card.Link> */}
         <img src={item.image} alt="" style={{width:"107%", margin:"0 0 3% -3.5%"}} />
@@ -51,7 +92,7 @@ async function handleClick(){
         
         
         <div id='likeComment'>
-          <div onClick={()=>{handleClick()}} ><i class="fa-regular fa-thumbs-up"></i>{item.Likes}</div>
+          <div  onClick={()=>{handleClick()}} ><i id={item.id}  class="fa-solid fa-thumbs-up"></i>{item.Likes}</div>
           <div><i class="fa-regular fa-comment"></i>{item.Comments}</div>
           <div><i class="fa-solid fa-retweet"></i>{}</div>
           <div><i class="fa-brands fa-whatsapp"></i></div>

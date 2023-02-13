@@ -17,7 +17,7 @@ const Feed =()=>{
       };
 
          const data =useSelector((store)=>{
-            console.log(store);
+            // console.log(store);
             return store.product;
          })
 
@@ -29,10 +29,12 @@ const Feed =()=>{
             action(dispatch)
         },[])
 
-
+        let loginStatus = localStorage.getItem("papa");
 
         const openWriter=()=>{
-            myAction(dispatch,true);
+
+            loginStatus ? myAction(dispatch,true) : alert("Login first to post");
+            
         }
         // let fetchfc = async()=>{
         //  let data = await fetch("http://localhost:3004/Feeds");

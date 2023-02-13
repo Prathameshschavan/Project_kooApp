@@ -2,14 +2,16 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Video from "../Components/Video";
 import Feed from "./Feed";
+import People from "./People";
 import PostWriter from "./PostWriter";
+
 
 
 function RouterDinesh(props) {
   return (
     <Routes>
       <Route path="/Feed" element={<Feed/>} />
-      <Route path="/people" element={<Feed/>} />
+      <Route path="/people" element={<People/>} />
       <Route path="/new" element={<Feed/>} />
       <Route path="/polls" element={<Feed/>}/>
       <Route path="/videos" element={<Video/>}/>

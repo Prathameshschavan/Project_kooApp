@@ -8,12 +8,13 @@ import {useDispatch} from "react-redux"
 
 
 const PostWriter = () => {
+    let loginuser=localStorage.getItem("papa")
     const [content, setContent] = useState({
            
             avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMCnKVdb6r65QZHqRYFJ8Bo_LK2_RmQH1quU0kEoKJEqxkHgJP53wS6tFUqAZD-0CY2GU&usqp=CAU",
-            username: "Guest_986",
+            username: `Guest_${loginuser.substring(0,3)}`,
             description: "",
-            people: "Guest_986",
+            people:`Guest_${loginuser.substring(0,3)}`,
             peoplePost: [
               {}
             ],
