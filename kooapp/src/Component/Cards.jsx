@@ -69,6 +69,17 @@ else{
 
   
 }
+
+
+const [removeIcon, setRemoveIcon] = useState(window.matchMedia("(min-width: 768px)").matches);
+            useEffect(() => {
+            const handler = e => setRemoveIcon(e.matches);
+            window.matchMedia("(min-width: 768px)").addListener(handler);
+            return () => {
+            window.matchMedia("(min-width: 768px)").removeListener(handler);
+            };
+            }, []);
+
   return (
     <Card >
       <Card.Body>
@@ -88,7 +99,8 @@ else{
       
         {/* <Card.Link href="#"></Card.Link> */}
         <img src={item.image} alt="" style={{width:"107%", margin:"0 0 3% -3.5%"}} />
-        <input  style={{width:"100%", borderRadius:"10px", padding:"1% 1% 1% 7%", outline:"none", border:"none",boxShadow: "rgba(0, 0, 0, 0.25) 0px 0px 0px 1px", marginBottom:"2%" }} type="text" placeholder= 'Write Your Comment' /><i style={{position:'absolute', marginLeft:"-91%", marginTop:"3.3%", fontSize:"20px"}} id="style.fa-solid" class="fa-solid fa-user fa-lg"></i>
+        <input  style={{width:"100%", borderRadius:"10px", padding:"1% 1% 1% 7%", outline:"none", border:"none",boxShadow: "rgba(0, 0, 0, 0.25) 0px 0px 0px 1px", marginBottom:"2%" }} type="text" placeholder= 'Write Your Comment' />
+        {removeIcon &&<i style={{position:'absolute', marginLeft:"-91%", marginTop:"3.3%", fontSize:"20px"}} id="style.fa-solid" class="fa-solid fa-user fa-lg"></i>}
         
         
         <div id='likeComment'>

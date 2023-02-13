@@ -23,7 +23,7 @@ function Navbar() {
  var style2={
      fontSize: "18px",
      display:"grid",
-     width:"242px",
+     width:"55%",
      position: "sticky",
       top: "18px",
      padding: "5%",
@@ -34,7 +34,7 @@ function Navbar() {
     
  }
  var imagestyle={
-  width: "3rem",
+  width: "30%",
   margin: "auto 3rem"
  }
 

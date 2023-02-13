@@ -21,6 +21,10 @@
 
 }
 
+#navitems{
+    width: 90%;
+    /* border: 2px solid red; */
+}
 #navitems>*{
     margin: 5% 0;
 }

@@ -42,6 +42,7 @@
     font-size: larger;
     text-align: center;
     height: 53px;
+    padding-bottom: 5px;
 }
 .nayainput2{
     border: 1px solid orchid;
@@ -51,6 +52,7 @@
     background-color: white;
     text-align: center;
     height: 53px;
+    padding-bottom: 5px;
 }
 .nayainput3{
     border: 1px solid orchid;
@@ -60,9 +62,10 @@
     font-size: larger;
     text-align: center;
     height: 53px;
+    padding-bottom: 5px;
 }
 .modal-content{
-    width: 70% !important;
+    width: 80% !important;
 }
 .fade modal show,.modal-dialog modal-lg modal-dialog-centered{
     display: block !important;
@@ -77,4 +80,14 @@
 .modal-title, .modal-header {
     /* height: 3px !important; */
     text-align: center !important;
+}
+
+.visually-hidden{
+    border: 2px solid red;
+}
+
+
+.alert-success{
+    padding-bottom: 50px;
+    height: 50px !important;
 }

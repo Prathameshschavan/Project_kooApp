@@ -90,8 +90,8 @@ function MyVerticallyCenteredModal(props) {
         {/* <div style={{display:"flex"}}> */}
            {/* <DropDown/> */}
         {!isVerifying && !isVerified && !isSignedIn && (
-        <form onSubmit={handleSubmit}>
-        <h4 style={{textAlign:"center !important"}}>Enter Your Mobile Number</h4>
+        <form  onSubmit={handleSubmit}>
+        <h4 style={{textAlign:"center !important", margin:"-8% 0 3% 0"}}>Enter Your Mobile Number</h4>
           <input
             type="tel" className='nayainput1'
             placeholder="Enter Your Mobile Number"
@@ -108,13 +108,13 @@ function MyVerticallyCenteredModal(props) {
         <span className="visually-hidden"><p>Verifying...</p></span>
         </Spinner>}
         {isVerified && (
-        <Alert variant="success">
+        <Alert style={{margin :"-7% 0 0 0"}} variant="success">
           <h4>Enter Your OTP!</h4>
         </Alert>
         )}
 
          {isVerified && !isSignedIn && (
-        <form onSubmit={handleSubmit}>
+        <form  onSubmit={handleSubmit}>
           <h2>OTP Sent to+{mobileNumber}</h2>
           <input
             type="text" className='nayainput'
@@ -142,10 +142,10 @@ function MyVerticallyCenteredModal(props) {
         <br /><br />
         <div style={{display:"flex",justifyContent:"center",alignItems:"baseline",gap:"5px",margin:"0"}}>
          <input type="checkbox" style={{margin:"0"}} />
-        <p style={{margin:"0"}}>I agree to receive important updates via Whatsapp  <AiOutlineWhatsApp/></p>
+        <p style={{margin:"0",fontSize:"15px"}}>I agree to receive important updates via Whatsapp  <AiOutlineWhatsApp/></p>
         </div>
-        <p style={{margin:"0px"}}>By continuing, I accept Terms of Service, Privacy Policy and </p>
-        <p style={{margin:"0px"}}>Community Guidelines.</p>
+        <p style={{margin:"0px",fontSize:"15px"}}>By continuing, I accept Terms of Service, Privacy Policy and </p>
+        <p style={{margin:"0px",fontSize:"15px"}}>Community Guidelines.</p>
       </Modal.Body>
       {/* <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>

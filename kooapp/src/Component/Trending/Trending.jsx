@@ -14,7 +14,7 @@ export default function Trending() {
     <i style={{margin:"-6.5% 0% 0 25% ", position:"absolute"}} class="fa-solid fa-microphone"></i>
     
 
-    <h6 style={{margin:"4% 0 -3% -5%", fontSize:"25px", fontWeight:"600", width:"100%"}}> <pre>Trending Hashtags           <i class="fa-solid fa-arrow-right"></i></pre></h6>
+    <div style={{margin:"4% 0 -3% -5%", fontSize:"25px", fontWeight:"600", width:"100%"}}> <pre>Trending Hashtags           <i class="fa-solid fa-arrow-right"></i></pre></div>
 
     <div id={style.first}>
       <div className={style.card}>

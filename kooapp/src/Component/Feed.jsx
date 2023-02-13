@@ -36,33 +36,40 @@ const Feed =()=>{
             loginStatus ? myAction(dispatch,true) : alert("Login first to post");
             
         }
-        // let fetchfc = async()=>{
-        //  let data = await fetch("http://localhost:3004/Feeds");
-        //  data= await data.json();
-        //  console.log(data);
-        // }
+       
+        let inputStyles={width:"94%", 
+        borderRadius:"10px", 
+        padding:"1% 1% 1% 7%",
+         outline:"none", 
+         border:"none",
+         cursor:"pointer",
+         boxShadow: "rgba(0, 0, 0, 0.10) 0px 0px 0px 1px", 
+         margin:"2% 0 2% -89% " };
 
-        // fetchfc();x
+         const [removeIcon, setRemoveIcon] = useState(window.matchMedia("(min-width: 1360px)").matches);
+            useEffect(() => {
+            const handler = e => setRemoveIcon(e.matches);
+            window.matchMedia("(min-width: 1360px)").addListener(handler);
+            return () => {
+            window.matchMedia("(min-width: 1360px)").removeListener(handler);
+            };
+            }, []);
 
-    //  let data=[]
-;
 
     return(
         <>
         <div style={{border: "2px solid #f8f7f3", backgroundColor:"#f8f7f3" ,width:"100%", margin:"0 0 0 0%"}}>
-        <input onClick={()=>{openWriter()}} readOnly  style={{width:"94%", borderRadius:"10px", padding:"1% 1% 1% 7%", outline:"none", border:"none",cursor:"pointer",boxShadow: "rgba(0, 0, 0, 0.10) 0px 0px 0px 1px", margin:"2% 0 2% -89% " }} type="text" placeholder= "What's on your mind?" />
-        <i style={{position:"absolute", cursor:"pointer", margin:"1.4% 20% 20% -2%"}} class="fa-solid fa-circle-plus"></i>
-        <i style={{position:'', marginLeft:"-92%", marginTop:"%", fontSize:"20px"}} id="style.fa-solid" class="fa-solid fa-user fa-lg"></i>
+            <input onClick={()=>{openWriter()}} readOnly  style={inputStyles} type="text" placeholder= "What's on your mind?" />
+
+           { removeIcon && <i style={{position:"absolute", cursor:"pointer", margin:"1.4% 20% 20% -2%"}} class="fa-solid fa-circle-plus"></i>}
+            
+            <i style={{position:'', marginLeft:"-92%",fontSize:"20px"}} id="style.fa-solid" class="fa-solid fa-user fa-lg"></i>
 
         <div style={{ }} > 
             {data.reverse().map((ele,i)=>{
              return( <Cards key={i+1} item ={ele}/>)
             })}
                </div>
-               {/* //Profilecard */}
-           {/* {data.length>0}? {data.map((ele,i)=>{
-                 return( <Profilecard key={i+1} item ={ele}/>)
-            })}: */}
         </div>
         </>
     )
