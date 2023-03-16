@@ -6,9 +6,12 @@ import "./Signin.css";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// import {useNavigate} from "react-router-dom";
+
 
 const Login = ({press}) => {
   // console.log(press)
+  // const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -23,6 +26,7 @@ const Login = ({press}) => {
         localStorage.setItem("userToken", data.data.user.token)
         toast.success("User Login SuccessFull !")
         window.location.reload();
+        // navigate("/")
      } catch (error) {
         // console.log(error);
         toast.error("UserName Or Password Is Wrong!")

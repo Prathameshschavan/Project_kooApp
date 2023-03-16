@@ -42,7 +42,8 @@ function Navbar() {
  }
  var imagestyle={
   width: "30%",
-  margin: "auto 3rem"
+  margin: "auto 3rem",
+  // border:"2px solid red"
  }
  
  
@@ -64,7 +65,7 @@ function Navbar() {
 // console.log(value);
   return (
     <div style={style2}>
-       <Link to="/"><img src="https://www.kooapp.com/assets/2d634360.svg" style={imagestyle} alt="" /></Link>
+       <Link to="/"><img src="https://www.kooapp.com/_next/static/media/logoKuSolidOutline.1f4fa971.svg" style={imagestyle} alt="" /></Link>
        <br /> 
        <div id="navitems">
           <Button variant="primary" style={style3}><Link style={aStyle} to="/"><AiOutlineHome/> Feed</Link></Button>{' '}
