@@ -1,19 +1,9 @@
 
-.urgent{
-    background-color:rgb(93,118,129) !important; 
-    border-radius: 50px;
-    font-size: 19px;
-    color:#fff;
-    font-weight: 600;
-}
+
 .btn-primary:hover{
     font-size: 19px !important;
     color: white !important;
-    background-color: #e1d5d5 !important;
-   /* fontSize:"19px",
-   color:"white!important",
-   backgroundColor:"#888!important"}} */
-
+    background-color: #5D7681 !important;
 }
 
 
@@ -26,46 +16,11 @@
 #contained-modal-title-vcenter{
     text-align: center !important; 
 }
-.nayainput{
-    border: 1px solid orchid;
-    border-radius: 38px;
-    width: 80%;
-    font-size: larger;
-    text-align: center;
-    height: 53px;
-}
-.nayainput1{
-    border: 1px solid orchid;
-    border-radius: 38px;
-    width: 80%;
-    background-color: white;
-    font-size: larger;
-    text-align: center;
-    height: 53px;
-    padding-bottom: 5px;
-}
-.nayainput2{
-    border: 1px solid orchid;
-    border-radius: 38px;
-    width: 80%;
-    font-size: larger;
-    background-color: white;
-    text-align: center;
-    height: 53px;
-    padding-bottom: 5px;
-}
-.nayainput3{
-    border: 1px solid orchid;
-    background-color: white;
-    border-radius: 38px;
-    width: 80%;
-    font-size: larger;
-    text-align: center;
-    height: 53px;
-    padding-bottom: 5px;
-}
+
 .modal-content{
-    width: 80% !important;
+    width: 200% !important;
+    padding: 1%;
+    margin: 0 0 0 -85%;
 }
 .fade modal show,.modal-dialog modal-lg modal-dialog-centered{
     display: block !important;
@@ -90,4 +45,41 @@
 .alert-success{
     padding-bottom: 50px;
     height: 50px !important;
+}
+
+.footerDiv{
+    display: flex;
+    /* border: 2px solid red; */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    margin: 0 3% 0 0;
+    padding: 0 0 0 15%;
+}
+
+.footerDiv>label{
+    font-size: 10px;
+}
+
+.footerDiv+p{
+    font-size: 10px;
+}
+
+.mb-3{
+    text-align: left;
+}
+
+.signBtn{
+    background-color: #fff;
+    color: #5D7681;
+    border: 2px solid #5D7681;
+    font-weight: 500;
+    border-radius: 30px;
+    margin-left: -35%;
+}
+
+.signBtn:hover{
+    background-color: #5D7681;
+    color: white;
 }

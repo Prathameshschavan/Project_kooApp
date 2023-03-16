@@ -21,7 +21,7 @@ const Feed =()=>{
             return store.product;
          })
 
-         console.log(data);
+        //  console.log(data);
     
         
         const dispatch =useDispatch()
@@ -29,7 +29,7 @@ const Feed =()=>{
             action(dispatch)
         },[])
 
-        let loginStatus = localStorage.getItem("papa");
+        let loginStatus = localStorage.getItem("userToken");
 
         const openWriter=()=>{
 

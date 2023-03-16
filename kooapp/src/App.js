@@ -40,8 +40,6 @@ function App() {
   return (
     <div className="App">
      
-     {/* {matches && <h1>helloe</h1>} */}
-      {/* {!matches && <h3>world</h3>} */}
 
 
       {data ?  <div><ChakraProvider> <PostWriter /> </ChakraProvider></div> : <div className='Koo'>
@@ -57,7 +55,7 @@ function App() {
                                                       
                                                   </div>
 
-                                                  {matches && <div style={{width:"100%"}} > 
+                                                  {matches && <div style={{width:"100%", position:"static"}} > 
                                                   <Trending /> 
                                                   </div>}
                                                   

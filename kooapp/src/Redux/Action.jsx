@@ -1,12 +1,12 @@
 
 const action =(dispatch)=>{
-    fetch("http://localhost:3004/Feeds")
+    fetch("https://clear-jeans-slug.cyclic.app/api/posts")
     .then((res)=>res.json())
     .then((data)=>{
-        console.log(data)
+        // console.log(data)
         dispatch({
             type:"Get",
-            payload:data
+            payload:data.posts
         })
     })
 
@@ -24,7 +24,7 @@ export const actionPeople =(dispatch)=>{
     fetch("http://localhost:3004/People")
     .then((res)=>res.json())
     .then((data)=>{
-        console.log(data)
+        // console.log(data)
         dispatch({
             type:"GetPeople",
             payload:data

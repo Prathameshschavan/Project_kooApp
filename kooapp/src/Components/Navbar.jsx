@@ -7,8 +7,17 @@ import { AiOutlineHome } from "react-icons/ai";
 import { AiOutlineBorderlessTable } from "react-icons/ai";
 import { AiOutlineSearch } from "react-icons/ai";
 import UserProfile from "./UserProfile";
+import Login from "./Login";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+
 function Navbar() {
-    var aStyle = {
+  const [value, setValue] = useState(null);
+  const [token, setToken] = useState(localStorage.getItem("userToken"));
+  const [trigger, press] = useState(0);
+  
+  var aStyle = {
     color: "#888",
     // margin: "9%",
     fontSize:" 19px",
@@ -25,28 +34,41 @@ function Navbar() {
      display:"grid",
      width:"55%",
      position: "sticky",
-      top: "18px",
+      top: "8%",
      padding: "5%",
      marginLeft:"40%",
      textAlign: "left" ,
-     
-
-    
+    //  border:"2px solid red"
  }
  var imagestyle={
   width: "30%",
   margin: "auto 3rem"
  }
+ 
+ 
 
-let loginStatus = localStorage.getItem("papa");
-console.log(loginStatus);
+ async function getLoggedInUser(){
+   try{let data = await axios.post("https://clear-jeans-slug.cyclic.app/api/verify",{token});
+  //  console.log(data);
+   setValue(data);}
+   catch(e){
+    console.log(e);
+   }
+ }
+
+ useEffect(()=>{
+  getLoggedInUser();
+  
+},[])
+ 
+// console.log(value);
   return (
     <div style={style2}>
        <Link to="/"><img src="https://www.kooapp.com/assets/2d634360.svg" style={imagestyle} alt="" /></Link>
        <br /> 
        <div id="navitems">
           <Button variant="primary" style={style3}><Link style={aStyle} to="/"><AiOutlineHome/> Feed</Link></Button>{' '}
-          <UserProfile/>
+          {value ?<UserProfile value={value.data}/> :<></>}
           <Button variant="primary" style={style3}><Link style={aStyle} to="/Explore"><AiOutlineBorderlessTable/> Explore</Link> </Button>{' '}
           <Language/>
           <Button variant="primary" style={style3}> <Link style={aStyle} to="/Search"><AiOutlineSearch/>  Search </Link></Button>{' '}
@@ -55,7 +77,9 @@ console.log(loginStatus);
       <Button className="newbtn"> <Link className="COLOR" to="/Koo">+ Koo</Link></Button>
       <br /> <br />  
       {
-      loginStatus ?   <></>:<Signin/>}
+      token ?   <></>:
+      <div id="method"><Signin/> <Login press={press} /></div>
+      }
     </div>
   );
 }

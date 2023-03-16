@@ -18,6 +18,7 @@ function RouterDinesh(props) {
       <Route path="/cricket" element={<Feed/>}/>
       <Route path="/following" element={<Feed/>}/>
       <Route path="/popular" element={<Feed/>}/>
+      <Route path="/" element={<Feed/>} />
     </Routes>
   );
 }

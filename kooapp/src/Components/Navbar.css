@@ -28,3 +28,11 @@
 #navitems>*{
     margin: 5% 0;
 }
+
+#method{
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+   gap: 35%;
+}
+

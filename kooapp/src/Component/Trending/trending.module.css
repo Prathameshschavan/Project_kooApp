@@ -4,7 +4,8 @@
     border-radius: 10px; 
     width: 80%;
     margin: 5% 0 0 5%;
-          
+    position: relative;
+    z-index: -999;
 }
 
 .card {

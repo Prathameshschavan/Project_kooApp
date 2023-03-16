@@ -5,10 +5,12 @@ import pic from "../Trending/trendImg.png"
 
 export default function Trending() {
   return (
-  <div style={{position:"sticky", top:"0"}}  >
+  <div style={{position:"sticky", top:"10%"}}  >
 
-    <div>
-    <input style={{width:"80%", borderRadius:"20px", padding:"1.5% 10%", margin:"5% 0 0 -12%"}} placeholder="Search" type="search"  />
+
+
+    <div style={{position:"static"}} >
+    <input style={{width:"80%", borderRadius:"20px", padding:"1.5% 10%", margin:"5% 0 0 -12%", zIndex:"-9999"}} placeholder="Search" type="search"  />
     </div>
     <i style={{margin:"-6.5% 0% 0 -42% ", position:"absolute"}} class="fa-solid fa-magnifying-glass"></i>
     <i style={{margin:"-6.5% 0% 0 25% ", position:"absolute"}} class="fa-solid fa-microphone"></i>
