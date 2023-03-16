@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Project_kooApp/static/css/main.e063c8ff.css",
-    "main.js": "/Project_kooApp/static/js/main.253e7a5d.js",
+    "main.js": "/Project_kooApp/static/js/main.51110df4.js",
     "static/media/trendImg.png": "/Project_kooApp/static/media/trendImg.5a95375bb12e9d2f5d32.png",
     "index.html": "/Project_kooApp/index.html",
     "main.e063c8ff.css.map": "/Project_kooApp/static/css/main.e063c8ff.css.map",
-    "main.253e7a5d.js.map": "/Project_kooApp/static/js/main.253e7a5d.js.map"
+    "main.51110df4.js.map": "/Project_kooApp/static/js/main.51110df4.js.map"
   },
   "entrypoints": [
     "static/css/main.e063c8ff.css",
-    "static/js/main.253e7a5d.js"
+    "static/js/main.51110df4.js"
   ]
 }
