@@ -1,6 +1,6 @@
 # KooApp Clone #
 
-# Deployment Link:-  https://prathameshschavan.github.io/Project_kooApp/ #
+# Deployment Link:-  https://full-stack-koo-app-rfd1-dsplsgp2y-prathameshschavan.vercel.app/ #
 
 KooApp clone is a microblogging platform that enables users to share their thoughts, images, and videos with others. This platform was built with a team of 5 members with the goal of creating a similar experience to the popular microblogging platform Koo.
 
